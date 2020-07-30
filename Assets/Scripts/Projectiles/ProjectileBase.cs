@@ -12,4 +12,5 @@ public class ProjectileBase : MonoBehaviour
             col.gameObject.GetComponent<PlayerDeath>().Death();
         }
     }
+
 }

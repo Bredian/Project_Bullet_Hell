@@ -36,10 +36,13 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\Player\PlayerDeath.cs" />
+     <Compile Include="Assets\Scripts\Projectiles\ProjectileBase.cs" />
      <Compile Include="Assets\Scripts\Player\Input\InputMaster.cs" />
      <Compile Include="Assets\Scripts\Player\Input\Player_Movement.cs" />
-     <Compile Include="Assets\Scripts\Projectiles\ProjectileBase.cs" />
-     <Compile Include="Assets\Scripts\Player\PlayerDeath.cs" />
+     <Compile Include="Assets\Scripts\Projectiles\ProjectileFollowing.cs" />
+     <Compile Include="Assets\Scripts\Projectiles\ProjectileFlying.cs" />
+     <Compile Include="Assets\Scripts\Projectiles\ProjectileKrak.cs" />
     <Reference Include="UnityEngine">
         <HintPath>C:/Program Files/Unity/Hub/Editor/2020.1.0f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>

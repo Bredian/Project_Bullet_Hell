@@ -11,6 +11,24 @@ TextureImporter:
   - first:
       213: 1614556416605395654
     second: concept_art_sprite_2
+  - first:
+      213: -857991721122925250
+    second: concept_art_sprite_0
+  - first:
+      213: 8857324542800231136
+    second: concept_art_sprite_1
+  - first:
+      213: -8943059695632550958
+    second: concept_art_sprite_2
+  - first:
+      213: 5378746189209799062
+    second: concept_art_sprite_3
+  - first:
+      213: 5774700380243010735
+    second: concept_art_sprite_3
+  - first:
+      213: 7122683673046719442
+    second: concept_art_sprite_4
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -137,10 +155,10 @@ TextureImporter:
       name: concept_art_sprite_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 61
-        width: 449
-        height: 750
+        x: 3
+        y: 158
+        width: 452
+        height: 797
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -148,8 +166,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 151bf097eff81dfc0800000000000000
-      internalID: -3471835514610405039
+      spriteID: e35fd32531dc714f0800000000000000
+      internalID: -857991721122925250
       vertices: []
       indices: 
       edges: []
@@ -158,10 +176,10 @@ TextureImporter:
       name: concept_art_sprite_1
       rect:
         serializedVersion: 2
-        x: 677
-        y: 61
-        width: 559
-        height: 558
+        x: 674
+        y: 201
+        width: 564
+        height: 564
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -169,8 +187,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9ce802ec600b892c0800000000000000
-      internalID: -4424593090616979767
+      spriteID: 0eaf4f95eb98bea70800000000000000
+      internalID: 8857324542800231136
       vertices: []
       indices: 
       edges: []
@@ -179,10 +197,10 @@ TextureImporter:
       name: concept_art_sprite_2
       rect:
         serializedVersion: 2
-        x: 1363
-        y: 0
-        width: 653
-        height: 680
+        x: 1364
+        y: 141
+        width: 658
+        height: 684
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -190,8 +208,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6ca9791b18e086610800000000000000
-      internalID: 1614556416605395654
+      spriteID: 2d375b4d69ed3e380800000000000000
+      internalID: -8943059695632550958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: concept_art_sprite_3
+      rect:
+        serializedVersion: 2
+        x: 2141
+        y: 0
+        width: 1162
+        height: 1158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa4a2b0766bd32050800000000000000
+      internalID: 5774700380243010735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: concept_art_sprite_4
+      rect:
+        serializedVersion: 2
+        x: 3441
+        y: 157
+        width: 421
+        height: 703
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2db9c63201bd8d260800000000000000
+      internalID: 7122683673046719442
       vertices: []
       indices: 
       edges: []
