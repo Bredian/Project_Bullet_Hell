@@ -6,11 +6,9 @@ public class ProjectileFollowing : MonoBehaviour
 {
     // Start is called before the first frame update
     private Transform player;
-    [SerializeField]private SpriteRenderer sprite;
-    private bool dead = false;
-    [SerializeField] private ParticleSystem shatterEffect;
     [SerializeField] private float speed = 5f;
     [SerializeField] private float lifetime = 3f;
+    [SerializeField] private ProjectileDeath projectileDeath;
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
@@ -31,19 +29,7 @@ public class ProjectileFollowing : MonoBehaviour
 
         if(lifetime <= 0)
         {
-            if(!dead)
-                Death();
-            if(!shatterEffect.isPlaying && dead)
-            {
-                Destroy(this.gameObject);
-            }
+            projectileDeath.Death();
         }
-    }
-        public void Death()
-    {
-        dead = true;
-        speed = 0;
-        sprite.enabled = false;
-        shatterEffect.Play();
     }
 }

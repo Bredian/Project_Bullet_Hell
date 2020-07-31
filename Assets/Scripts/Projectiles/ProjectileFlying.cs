@@ -13,8 +13,4 @@ public class ProjectileFlying : MonoBehaviour
     }
 
     // Update is called once per frame
-    void OnBecameInvisible()
-    {
-        Destroy(this.gameObject);
-    }
 }
