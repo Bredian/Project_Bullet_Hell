@@ -5101,7 +5101,7 @@ MonoBehaviour:
   - {fileID: 2559829891428242100, guid: 4496258e24982b148a392b4f97d1d73f, type: 3}
   - {fileID: 1171027295275639202, guid: 1c95fffd3ab896449bae43f5e8c41595, type: 3}
   lifetime: 5
-  speed: 0.5
+  speed: 1
   krakSpawnPositions:
   - {fileID: 3642486437887427154}
   - {fileID: 3642486436915786699}
@@ -5129,7 +5129,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 11.62155, y: 11.580001}
+    oldSize: {x: 11.62, y: 11.611552}
     newSize: {x: 11.607175, y: 11.579999}
     adaptiveTilingThreshold: 0.5
     drawMode: 0

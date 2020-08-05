@@ -6,12 +6,17 @@ public class PlayerDeath : MonoBehaviour
 {
     [SerializeField] private ParticleSystem explosion;
     [SerializeField] private SpriteRenderer sprite;
+    [SerializeField] private Collider2D playerCollider;
     private bool dead = false;
     public void Death()
     {
-        dead = true;
-        sprite.enabled = false;
-        explosion.Play();
+        if(!dead)
+        {
+            dead = true;
+            sprite.enabled = false;
+            playerCollider.enabled = false;
+            explosion.Play();
+        }
     }
     void Update()
     {

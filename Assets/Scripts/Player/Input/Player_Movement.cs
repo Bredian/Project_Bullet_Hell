@@ -19,6 +19,7 @@ public class Player_Movement : MonoBehaviour
     public float speed = 2;
     void Awake()
     {
+        tapPosition = transform.position;
         //InputMaster init: creating instance of InputMaster and enabling it
         inputMaster = new InputMaster();
         inputMaster.Enable();
@@ -61,8 +62,12 @@ public class Player_Movement : MonoBehaviour
         }
         //Moving in direction with our speed until we in deltaRadius from tapPosition
         if(moving)
+           // Time.timeScale = 1f;
             transform.position += Vector3.Normalize(direction) * speed * Time.deltaTime;
         if(direction.magnitude <= deltaRadius)
+        {
+            //Time.timeScale = 0f;
             moving = false;  
+        }
     }
 }

@@ -8,6 +8,11 @@ public class ProjectileDeath : MonoBehaviour
     [SerializeField] private SpriteRenderer sprite;
     [SerializeField] private Collider2D projectileCollider;
     public bool dead = false;
+    public static int projectileCount = 0;
+    void Start()
+    {
+        projectileCount++;
+    }
     public void Death()
     {
         if(!dead)
@@ -29,6 +34,7 @@ public class ProjectileDeath : MonoBehaviour
     }
     void OnBecameInvisible()
     {
+        projectileCount--;
         Destroy(this.gameObject);
     }
 }

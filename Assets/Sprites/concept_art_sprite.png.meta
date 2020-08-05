@@ -29,6 +29,18 @@ TextureImporter:
   - first:
       213: 7122683673046719442
     second: concept_art_sprite_4
+  - first:
+      213: -2792442474992145386
+    second: concept_art_sprite_4
+  - first:
+      213: -5349708104485949767
+    second: concept_art_sprite_5
+  - first:
+      213: -3038877443136982066
+    second: concept_art_sprite_6
+  - first:
+      213: -3027402481421329195
+    second: concept_art_sprite_7
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -155,12 +167,12 @@ TextureImporter:
       name: concept_art_sprite_0
       rect:
         serializedVersion: 2
-        x: 3
-        y: 158
+        x: 0
+        y: 1403
         width: 452
-        height: 797
+        height: 798
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -177,11 +189,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 674
-        y: 201
+        y: 1447
         width: 564
         height: 564
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -197,12 +209,12 @@ TextureImporter:
       name: concept_art_sprite_2
       rect:
         serializedVersion: 2
-        x: 1364
-        y: 141
+        x: 1361
+        y: 1387
         width: 658
         height: 684
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -219,11 +231,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 2141
-        y: 0
+        y: 1243
         width: 1162
-        height: 1158
+        height: 1161
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -240,18 +252,81 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 3441
-        y: 157
+        y: 1402
         width: 421
         height: 703
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2db9c63201bd8d260800000000000000
-      internalID: 7122683673046719442
+      spriteID: 61c616e2d504f39d0800000000000000
+      internalID: -2792442474992145386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: concept_art_sprite_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 201
+        width: 452
+        height: 754
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9be261ca2d402c5b0800000000000000
+      internalID: -5349708104485949767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: concept_art_sprite_6
+      rect:
+        serializedVersion: 2
+        x: 2144
+        y: 0
+        width: 1159
+        height: 1158
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 1, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec37fdde01db3d5d0800000000000000
+      internalID: -3038877443136982066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: concept_art_sprite_7
+      rect:
+        serializedVersion: 2
+        x: 3436
+        y: 206
+        width: 421
+        height: 729
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5dcdeb6ab718cf5d0800000000000000
+      internalID: -3027402481421329195
       vertices: []
       indices: 
       edges: []
