@@ -52,6 +52,10 @@ public class Player_Movement : MonoBehaviour
     }
     void Update()
     {
+        if(PlayerDeath.dead)
+        {
+             inputMaster.Disable();
+        }
         //Getting direction
         Vector3 direction = tapPosition - transform.position;
         //Rotating when needRotation flag is rised

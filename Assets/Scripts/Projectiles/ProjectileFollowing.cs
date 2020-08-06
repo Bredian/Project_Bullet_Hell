@@ -12,6 +12,10 @@ public class ProjectileFollowing : MonoBehaviour
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+        if(player == null)
+        {
+            Destroy(this.gameObject);
+        }
     }
 
     // Update is called once per frame
@@ -20,12 +24,16 @@ public class ProjectileFollowing : MonoBehaviour
         lifetime = lifetime - Time.deltaTime;
         if(player == null)
         {
-            player = transform;
+            projectileDeath.Death();
         }
-        Vector3 dir = player.position - transform.position;
-        float angle = -Mathf.Atan2(dir.x,dir.y) * Mathf.Rad2Deg;
-        transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
-        transform.position += dir.normalized * speed * Time.deltaTime;
+        if(player != null)
+        {
+            Vector3 dir = player.position - transform.position;
+            float angle = -Mathf.Atan2(dir.x,dir.y) * Mathf.Rad2Deg;
+            transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+            transform.position += dir.normalized * speed * Time.deltaTime;
+        }
+        
 
         if(lifetime <= 0)
         {

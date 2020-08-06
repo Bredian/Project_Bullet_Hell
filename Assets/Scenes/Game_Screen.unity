@@ -440,6 +440,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6022603670863658284, guid: c6d8e4776f46d0d44a12cc7b134e32e4,
+        type: 3}
+      propertyPath: distanceFromPlayer
+      value: 2.5
+      objectReference: {fileID: 0}
     - target: {fileID: 6022603670863658286, guid: c6d8e4776f46d0d44a12cc7b134e32e4,
         type: 3}
       propertyPath: m_Name
@@ -676,7 +681,7 @@ PrefabInstance:
     - target: {fileID: 6555043745750695125, guid: 860cc6839af9098409248da883f0a194,
         type: 3}
       propertyPath: deltaRadius
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6555043745750695125, guid: 860cc6839af9098409248da883f0a194,
         type: 3}
@@ -688,6 +693,12 @@ PrefabInstance:
       propertyPath: deviationRate
       value: 0.4
       objectReference: {fileID: 0}
+    - target: {fileID: 6555043745750695125, guid: 860cc6839af9098409248da883f0a194,
+        type: 3}
+      propertyPath: spawnablePrefab
+      value: 
+      objectReference: {fileID: 1171027295275639202, guid: 1c95fffd3ab896449bae43f5e8c41595,
+        type: 3}
     - target: {fileID: 6555043747010006737, guid: 860cc6839af9098409248da883f0a194,
         type: 3}
       propertyPath: m_IsActive
@@ -696,7 +707,7 @@ PrefabInstance:
     - target: {fileID: 6555043747010006738, guid: 860cc6839af9098409248da883f0a194,
         type: 3}
       propertyPath: deltaRadius
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6555043747010006738, guid: 860cc6839af9098409248da883f0a194,
         type: 3}
@@ -708,21 +719,33 @@ PrefabInstance:
       propertyPath: deviationRate
       value: 0.4
       objectReference: {fileID: 0}
+    - target: {fileID: 6555043747010006738, guid: 860cc6839af9098409248da883f0a194,
+        type: 3}
+      propertyPath: spawnablePrefab
+      value: 
+      objectReference: {fileID: 2392683407348698624, guid: b11b30db03f852448b1d38bb63b9cdbb,
+        type: 3}
     - target: {fileID: 6555043747218279541, guid: 860cc6839af9098409248da883f0a194,
         type: 3}
       propertyPath: deltaRadius
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6555043747218279541, guid: 860cc6839af9098409248da883f0a194,
         type: 3}
       propertyPath: averageSpawnRate
-      value: 0.5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6555043747218279541, guid: 860cc6839af9098409248da883f0a194,
         type: 3}
       propertyPath: deviationRate
       value: 0.4
       objectReference: {fileID: 0}
+    - target: {fileID: 6555043747218279541, guid: 860cc6839af9098409248da883f0a194,
+        type: 3}
+      propertyPath: spawnablePrefab
+      value: 
+      objectReference: {fileID: 9087220723767493858, guid: 131801db0c833d34ab19e51f521595af,
+        type: 3}
     - target: {fileID: 6555043747482331427, guid: 860cc6839af9098409248da883f0a194,
         type: 3}
       propertyPath: m_IsActive
@@ -731,7 +754,7 @@ PrefabInstance:
     - target: {fileID: 6555043747482331436, guid: 860cc6839af9098409248da883f0a194,
         type: 3}
       propertyPath: deltaRadius
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6555043747482331436, guid: 860cc6839af9098409248da883f0a194,
         type: 3}
@@ -743,6 +766,12 @@ PrefabInstance:
       propertyPath: deviationRate
       value: 0.4
       objectReference: {fileID: 0}
+    - target: {fileID: 6555043747482331436, guid: 860cc6839af9098409248da883f0a194,
+        type: 3}
+      propertyPath: spawnablePrefab
+      value: 
+      objectReference: {fileID: 7286355700186303637, guid: d3ae7572361af3948920c7d471350680,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 860cc6839af9098409248da883f0a194, type: 3}
 --- !u!198 &2017001962 stripped

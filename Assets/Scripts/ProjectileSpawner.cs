@@ -54,7 +54,7 @@ public class ProjectileSpawner : MonoBehaviour
             } while((playerPosition - spawnPosition).magnitude < deltaRadius);
             GameObject spawned = Instantiate(spawnablePrefab, spawnPosition, spawnablePrefab.transform.rotation);
             currentSpawnRate = averageSpawnRate + Random.Range(-deviationRate * averageSpawnRate, deviationRate * averageSpawnRate);
-            if(ProjectileDeath.projectileCount >= 2 * (ObjectivePoint.score + 1))
+            if(ProjectileDeath.projectileCount >= 1 * (ObjectivePoint.score) + 3)
             {
                 //ProjectileDeath.projectileCount--;
                 Destroy(spawned);
