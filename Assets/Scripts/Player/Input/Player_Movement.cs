@@ -7,6 +7,7 @@ public class Player_Movement : MonoBehaviour
 {
     //Radius around tapPosition where you need stop moving
     [SerializeField] private float deltaRadius;
+    [SerializeField] private PlayerDeath playerDeath;
     //New Input Systems Actions called InputMaster
     private InputMaster inputMaster;
     //Move flag
@@ -25,6 +26,10 @@ public class Player_Movement : MonoBehaviour
         inputMaster.Enable();
         //Connecting Move function when action Movement performed
         inputMaster.Player.Movement.performed += context => Move();
+        playerDeath.OnPlayerDeath.AddListener((dead) =>
+        {
+            inputMaster.Disable();
+        });
     }
     void Move()
     {
@@ -52,10 +57,6 @@ public class Player_Movement : MonoBehaviour
     }
     void Update()
     {
-        if(PlayerDeath.dead)
-        {
-             inputMaster.Disable();
-        }
         //Getting direction
         Vector3 direction = tapPosition - transform.position;
         //Rotating when needRotation flag is rised

@@ -1489,7 +1489,7 @@ ParticleSystem:
     uvChannelMask: -1
     rowMode: 1
     sprites:
-    - sprite: {fileID: -4424593090616979767, guid: 83a9705c8d80a6e4fbe7880a92454020,
+    - sprite: {fileID: 7122683673046719442, guid: 83a9705c8d80a6e4fbe7880a92454020,
         type: 3}
     flipU: 0
     flipV: 0
