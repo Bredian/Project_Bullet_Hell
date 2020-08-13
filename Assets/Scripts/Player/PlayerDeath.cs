@@ -9,6 +9,7 @@ public class PlayerDeath : MonoBehaviour
     [SerializeField] private ParticleSystem explosion;
     [SerializeField] private SpriteRenderer sprite;
     [SerializeField] private Collider2D playerCollider;
+    [SerializeField] private AudioSource explosionSound;
     public static bool dead = false;
     void Start()
     {
@@ -25,6 +26,7 @@ public class PlayerDeath : MonoBehaviour
             OnPlayerDeath.Invoke(dead);
             sprite.enabled = false;
             explosion.Play();
+            explosionSound.Play();
         }
     }
     void Update()

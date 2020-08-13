@@ -10,13 +10,13 @@ public class LevelLoader : MonoBehaviour
     [SerializeField] private float transitionTime;
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
     public void LoadGame()
     {
