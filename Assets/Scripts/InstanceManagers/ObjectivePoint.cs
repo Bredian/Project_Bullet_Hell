@@ -21,9 +21,13 @@ public class ObjectivePoint : MonoBehaviour
         Vector3 newPosition;
         do
         {
-            newPosition = new Vector3(Random.Range(-2.5f, 2.5f), Random.Range(-4.7f, 4.7f), 0f);
+            
+            float spawnY = Random.Range(Camera.main.ScreenToWorldPoint(new Vector2(0, 0)).y + 0.73f, Camera.main.ScreenToWorldPoint(new Vector2(0, Screen.height)).y - 0.73f);
+            float spawnX = Random.Range(Camera.main.ScreenToWorldPoint(new Vector2(0, 0)).x + 0.73f, Camera.main.ScreenToWorldPoint(new Vector2(Screen.width, 0)).x - 0.73f);
+            newPosition = new Vector3(spawnX, spawnY, 0f);
         } while((newPosition - playerStartTransform.position).magnitude < distanceFromPlayer);
         transform.position = newPosition;
+        Debug.Log(Camera.main.ScreenToWorldPoint(new Vector2(0, 0)).x);
     }
 
     // Update is called once per frame
@@ -40,7 +44,9 @@ public class ObjectivePoint : MonoBehaviour
             Vector3 newPosition;
             do
             {
-                newPosition = new Vector3(Random.Range(-2.5f, 2.5f), Random.Range(-4.7f, 4.7f), 0f);
+                float spawnY = Random.Range(Camera.main.ScreenToWorldPoint(new Vector2(0, 0)).y + 0.73f, Camera.main.ScreenToWorldPoint(new Vector2(0, Screen.height)).y - 0.73f);
+                float spawnX = Random.Range(Camera.main.ScreenToWorldPoint(new Vector2(0, 0)).x + 0.73f, Camera.main.ScreenToWorldPoint(new Vector2(Screen.width, 0)).x - 0.73f);
+                newPosition = new Vector3(spawnX, spawnY, 0f);
             } while((newPosition - transform.position).magnitude < distanceFromPlayer);
             transform.position = newPosition;
         }

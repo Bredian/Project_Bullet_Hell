@@ -1,12 +1,23 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - CameraShake
+    - GameScreenCameraBreathe
+    - GameScreenDJ
+    - HighScoreText
+    - LevelLoader
+    - MainMenuDJ
+    - ObjectivePoint
+    - OutOfPauseButtonMover
+    - PauseMenu
     - PlayerDeath
     - Player_Movement
     - ProjectileBase
     - ProjectileDeath
     - ProjectileFlying
-    - ProjectileKrak
+    - ProjectileSpawner
+    - ScoreDisplay
+    - StartScreenCameraBreathe
     Unity.2D.Tilemap.Editor.dll:
     - UnityEditor.Tilemaps.GridPaintingState
     - UnityEditor.Tilemaps.GridPaletteBrushes
@@ -14,15 +25,36 @@ ScriptsOnlyBuild:
     - UnityEditor.Tilemaps.SceneViewGridManager
     - UnityEditor.Tilemaps.TileDragAndDropManager
     Unity.InputSystem.dll:
+    - UnityEngine.InputSystem.InputActionAsset
+    - UnityEngine.InputSystem.InputActionReference
     - UnityEngine.InputSystem.InputSettings
     - UnityEngine.InputSystem.InputSystemObject
     - UnityEngine.InputSystem.RemoteInputPlayerConnection
+    - UnityEngine.InputSystem.UI.InputSystemUIInputModule
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
+    Unity.TextMeshPro.dll:
+    - TMPro.TMP_FontAsset
+    - TMPro.TMP_Settings
+    - TMPro.TMP_SpriteAsset
+    - TMPro.TMP_StyleSheet
+    - TMPro.TextMeshProUGUI
+    UnityEditor.Graphs.dll:
+    - UnityEditor.Graphs.AnimationBlendTree.Graph
+    - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.Graph
+    - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.TestListCacheData
     - UnityEditor.TestTools.TestRunner.TestRun.TestJobDataHolder
+    UnityEngine.UI.dll:
+    - UnityEngine.EventSystems.EventSystem
+    - UnityEngine.UI.Button
+    - UnityEngine.UI.CanvasScaler
+    - UnityEngine.UI.GraphicRaycaster
+    - UnityEngine.UI.Image
   sceneClasses:
     Assets/Scenes/Game_Screen.unity:
     - Class: 1
@@ -43,23 +75,79 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 60
       Script: {instanceID: 0}
+    - Class: 61
+      Script: {instanceID: 0}
+    - Class: 65
+      Script: {instanceID: 0}
+    - Class: 74
+      Script: {instanceID: 0}
     - Class: 81
+      Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
+    - Class: 91
+      Script: {instanceID: 0}
+    - Class: 95
       Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11762}
+      Script: {instanceID: 11768}
     - Class: 114
-      Script: {instanceID: 12308}
+      Script: {instanceID: 11776}
     - Class: 114
-      Script: {instanceID: 12900}
+      Script: {instanceID: 11968}
     - Class: 114
-      Script: {instanceID: 13906}
+      Script: {instanceID: 12066}
     - Class: 114
-      Script: {instanceID: 14518}
+      Script: {instanceID: 12144}
     - Class: 114
-      Script: {instanceID: 14718}
+      Script: {instanceID: 12280}
+    - Class: 114
+      Script: {instanceID: 12326}
+    - Class: 114
+      Script: {instanceID: 12562}
+    - Class: 114
+      Script: {instanceID: 12670}
+    - Class: 114
+      Script: {instanceID: 12816}
+    - Class: 114
+      Script: {instanceID: 13054}
+    - Class: 114
+      Script: {instanceID: 13324}
+    - Class: 114
+      Script: {instanceID: 13512}
+    - Class: 114
+      Script: {instanceID: 13514}
+    - Class: 114
+      Script: {instanceID: 13596}
+    - Class: 114
+      Script: {instanceID: 13648}
+    - Class: 114
+      Script: {instanceID: 13654}
+    - Class: 114
+      Script: {instanceID: 13712}
+    - Class: 114
+      Script: {instanceID: 13900}
+    - Class: 114
+      Script: {instanceID: 13950}
+    - Class: 114
+      Script: {instanceID: 14036}
+    - Class: 114
+      Script: {instanceID: 14100}
+    - Class: 114
+      Script: {instanceID: 14150}
+    - Class: 114
+      Script: {instanceID: 14192}
+    - Class: 114
+      Script: {instanceID: 14220}
+    - Class: 114
+      Script: {instanceID: 14310}
     - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
       Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
@@ -73,7 +161,108 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 213
       Script: {instanceID: 0}
-    - Class: 850595691
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
+      Script: {instanceID: 0}
+    Assets/Scenes/Start_Menu.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 49
+      Script: {instanceID: 0}
+    - Class: 50
+      Script: {instanceID: 0}
+    - Class: 60
+      Script: {instanceID: 0}
+    - Class: 74
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
+    - Class: 91
+      Script: {instanceID: 0}
+    - Class: 95
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 11768}
+    - Class: 114
+      Script: {instanceID: 12066}
+    - Class: 114
+      Script: {instanceID: 12144}
+    - Class: 114
+      Script: {instanceID: 12280}
+    - Class: 114
+      Script: {instanceID: 12562}
+    - Class: 114
+      Script: {instanceID: 12670}
+    - Class: 114
+      Script: {instanceID: 12706}
+    - Class: 114
+      Script: {instanceID: 12816}
+    - Class: 114
+      Script: {instanceID: 13324}
+    - Class: 114
+      Script: {instanceID: 13512}
+    - Class: 114
+      Script: {instanceID: 13596}
+    - Class: 114
+      Script: {instanceID: 13654}
+    - Class: 114
+      Script: {instanceID: 13672}
+    - Class: 114
+      Script: {instanceID: 13712}
+    - Class: 114
+      Script: {instanceID: 13900}
+    - Class: 114
+      Script: {instanceID: 13950}
+    - Class: 114
+      Script: {instanceID: 14036}
+    - Class: 114
+      Script: {instanceID: 14150}
+    - Class: 114
+      Script: {instanceID: 14268}
+    - Class: 114
+      Script: {instanceID: 14310}
+    - Class: 114
+      Script: {instanceID: 14614}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
+      Script: {instanceID: 0}
+    - Class: 198
+      Script: {instanceID: 0}
+    - Class: 199
+      Script: {instanceID: 0}
+    - Class: 212
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
       Script: {instanceID: 0}
   scriptHashData:
   - hash:
@@ -84,16 +273,10 @@ ScriptsOnlyBuild:
     className: CanvasScaler
   - hash:
       serializedVersion: 2
-      Hash: fcc7b7e865ed651b23434a92e4de9ef4
+      Hash: 0874182c761aad2fcfa94cf2b6b6fa00
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerDeath
-  - hash:
-      serializedVersion: 2
-      Hash: 557b8d683142468c7c52e0163c1928a6
-    assemblyName: AstarPathfindingProject.dll
-    namespaceName: Pathfinding
-    className: ProceduralGridMover
   - hash:
       serializedVersion: 2
       Hash: f40fedccd4adbc76605bea6d67537e4b
@@ -114,12 +297,6 @@ ScriptsOnlyBuild:
     className: TMP_Dropdown
   - hash:
       serializedVersion: 2
-      Hash: 482b4788a1650225af3664f1486faf28
-    assemblyName: AstarPathfindingProject.dll
-    namespaceName: Pathfinding.Examples
-    className: ObjectPlacer
-  - hash:
-      serializedVersion: 2
       Hash: e7a73f5f78ba6445195ec23b74a1ce2d
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
@@ -130,6 +307,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.TestRunner.dll
     namespaceName: UnityEngine.TestTools.TestRunner.Callbacks
     className: PlayerQuitHandler
+  - hash:
+      serializedVersion: 2
+      Hash: 43a30711ce501645382d62e8fec1cccb
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: GameScreenCameraBreathe
   - hash:
       serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
@@ -192,16 +375,16 @@ ScriptsOnlyBuild:
     className: OnScreenStick
   - hash:
       serializedVersion: 2
-      Hash: aac6f99dc84c9a5a1171e2927e8f7014
-    assemblyName: AstarPathfindingProject.dll
-    namespaceName: Pathfinding
-    className: AIPath
-  - hash:
-      serializedVersion: 2
       Hash: 5f206dd3b0d6b103c9456019be49d644
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_InputField
+  - hash:
+      serializedVersion: 2
+      Hash: f15e03d7401c7e06b8917608c5d11165
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ProjectileSpawner
   - hash:
       serializedVersion: 2
       Hash: 7ab0e790220bdca831fdd886b339039d
@@ -253,21 +436,9 @@ ScriptsOnlyBuild:
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: AstarPathfindingProject.dll
-    namespaceName: Pathfinding
-    className: RecastTileUpdate
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: ProjectileBase
-  - hash:
-      serializedVersion: 2
-      Hash: a5a60d0b9e6d53d72e12aef88e23ee68
-    assemblyName: AstarPathfindingProject.dll
-    namespaceName: Pathfinding
-    className: FunnelModifier
   - hash:
       serializedVersion: 2
       Hash: bd3cf68c8964d3c66d1c43f4f98508c9
@@ -282,16 +453,16 @@ ScriptsOnlyBuild:
     className: TrackedPoseDriver
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: GameScreenDJ
+  - hash:
+      serializedVersion: 2
       Hash: cf9f5cf2c3145a37ac07f00e50e460f9
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: AspectRatioFitter
-  - hash:
-      serializedVersion: 2
-      Hash: f08fcc1618ec9915d9530432bf8be751
-    assemblyName: AstarPathfindingProject.dll
-    namespaceName: Pathfinding
-    className: SingleNodeBlocker
   - hash:
       serializedVersion: 2
       Hash: ef5c43f921427d03730f6ea4c848f07d
@@ -300,22 +471,10 @@ ScriptsOnlyBuild:
     className: RectMask2D
   - hash:
       serializedVersion: 2
-      Hash: 5b4afb463f9301b8aa9a81339510977c
-    assemblyName: AstarPathfindingProject.dll
-    namespaceName: Pathfinding.RVO
-    className: RVONavmesh
-  - hash:
-      serializedVersion: 2
       Hash: 6980e81ddc615a861309d2d659cc3760
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_SubMeshUI
-  - hash:
-      serializedVersion: 2
-      Hash: 3895f0859a862b36f9e787358fbc1474
-    assemblyName: AstarPathfindingProject.dll
-    namespaceName: Pathfinding.Examples
-    className: PathTypesDemo
   - hash:
       serializedVersion: 2
       Hash: 50d893c48b1c02a4b8ede5fe28ff9e85
@@ -336,12 +495,6 @@ ScriptsOnlyBuild:
     className: Mask
   - hash:
       serializedVersion: 2
-      Hash: 329c72b20f4a2b815f58258cc022491f
-    assemblyName: AstarPathfindingProject.dll
-    namespaceName: Pathfinding.Examples
-    className: RVOExampleAgent
-  - hash:
-      serializedVersion: 2
       Hash: caa533b001ae39b864ba8425019e2268
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -354,18 +507,6 @@ ScriptsOnlyBuild:
     className: InputSystemUIInputModule
   - hash:
       serializedVersion: 2
-      Hash: e6caf2f78f16271f4ec0d64f57ea549b
-    assemblyName: AstarPathfindingProject.dll
-    namespaceName: Pathfinding
-    className: RadiusModifier
-  - hash:
-      serializedVersion: 2
-      Hash: 1d6bc7fb33fcc56237df7c329c31fac2
-    assemblyName: AstarPathfindingProject.dll
-    namespaceName: Pathfinding
-    className: AILerp
-  - hash:
-      serializedVersion: 2
       Hash: cc4274b586df3c02688bac01b88bd16c
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
@@ -376,12 +517,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: ControlPlayableAsset
-  - hash:
-      serializedVersion: 2
-      Hash: 46cdbf48786f1faf06540c1959cd7b81
-    assemblyName: AstarPathfindingProject.dll
-    namespaceName: Pathfinding
-    className: NodeLink
   - hash:
       serializedVersion: 2
       Hash: 5cc439bf63c0539d39588e69465ac2ab
@@ -408,19 +543,13 @@ ScriptsOnlyBuild:
     className: Selectable
   - hash:
       serializedVersion: 2
-      Hash: 185c436da74469e56a79ed84bd564e92
-    assemblyName: AstarPathfindingProject.dll
-    namespaceName: Pathfinding
-    className: AdvancedSmooth
-  - hash:
-      serializedVersion: 2
       Hash: c24a778d9aa393e11e54bff320ca63de
     assemblyName: Unity.InputSystem.dll
     namespaceName: UnityEngine.InputSystem
     className: PlayerInput
   - hash:
       serializedVersion: 2
-      Hash: 62b9b49eb438926ae33fdbd4ba994d3a
+      Hash: 87486f3af9f1dead07d18bd829cc5720
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: ProjectileFlying
@@ -430,30 +559,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.InputSystem.dll
     namespaceName: UnityEngine.InputSystem
     className: InputSettings
-  - hash:
-      serializedVersion: 2
-      Hash: 338604d3df484faabcf5a68ed460325d
-    assemblyName: AstarPathfindingProject.dll
-    namespaceName: Pathfinding.Examples
-    className: RVOAgentPlacer
-  - hash:
-      serializedVersion: 2
-      Hash: 2f448f20822d58258fb0bc68a88658a2
-    assemblyName: AstarPathfindingProject.dll
-    namespaceName: Pathfinding.Examples
-    className: LocalSpaceRichAI
-  - hash:
-      serializedVersion: 2
-      Hash: 427e4ae6223362877cde7ac01baa97c3
-    assemblyName: AstarPathfindingProject.dll
-    namespaceName: Pathfinding
-    className: NodeLink2
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: AstarPathfindingProject.dll
-    namespaceName: Pathfinding.Examples
-    className: TurnBasedDoor
   - hash:
       serializedVersion: 2
       Hash: cd0ecdca0166232906c6f2df9dddc3d3
@@ -468,12 +573,6 @@ ScriptsOnlyBuild:
     className: InputActionImporterEditor
   - hash:
       serializedVersion: 2
-      Hash: bcb1cb4a9395b5b5db8b7a2dd4db50da
-    assemblyName: AstarPathfindingProject.dll
-    namespaceName: 
-    className: AstarPath
-  - hash:
-      serializedVersion: 2
       Hash: 287a4aa7392bcfb309b4d7b4dc89eb3c
     assemblyName: Unity.InputSystem.dll
     namespaceName: UnityEngine.InputSystem.Editor
@@ -484,12 +583,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_Asset
-  - hash:
-      serializedVersion: 2
-      Hash: 2f2ccb1f731438ed0471221f2a61e919
-    assemblyName: AstarPathfindingProject.dll
-    namespaceName: Pathfinding.Legacy
-    className: LegacyRichAI
   - hash:
       serializedVersion: 2
       Hash: 040dd48e3a027d5424519a5fa2009df4
@@ -504,22 +597,16 @@ ScriptsOnlyBuild:
     className: SignalTrack
   - hash:
       serializedVersion: 2
+      Hash: 0dd2b39a8ab4cc5970fe69a508ca6f6b
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: CameraShake
+  - hash:
+      serializedVersion: 2
       Hash: bfeb96683d3796cadaab890bfdfe92be
     assemblyName: Unity.InputSystem.dll
     namespaceName: UnityEngine.InputSystem.Editor
     className: InputDebuggerWindow
-  - hash:
-      serializedVersion: 2
-      Hash: 9c41ea27390f0bb733517833b64173fc
-    assemblyName: AstarPathfindingProject.dll
-    namespaceName: Pathfinding
-    className: NavmeshAdd
-  - hash:
-      serializedVersion: 2
-      Hash: e7dbafb3453c59e1a2206483f7085123
-    assemblyName: AstarPathfindingProject.dll
-    namespaceName: Pathfinding.Examples
-    className: TurnBasedManager
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -528,46 +615,16 @@ ScriptsOnlyBuild:
     className: TMP_SpriteAnimator
   - hash:
       serializedVersion: 2
-      Hash: e59b4ddbf539212f3d2f911f95cc1bb3
-    assemblyName: AstarPathfindingProject.dll
-    namespaceName: Pathfinding.Examples
-    className: AstarSmoothFollow2
-  - hash:
-      serializedVersion: 2
-      Hash: 0cceca996e1eb1401d74a841f34c4f83
-    assemblyName: AstarPathfindingProject.dll
-    namespaceName: Pathfinding
-    className: SimpleSmoothModifier
-  - hash:
-      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: UnityEngine.TestRunner.dll
     namespaceName: UnityEngine.TestTools.TestRunner.Callbacks
     className: RemoteTestResultSender
   - hash:
       serializedVersion: 2
-      Hash: 4a1de4aafdb073f324c715ab93784027
-    assemblyName: AstarPathfindingProject.dll
-    namespaceName: Pathfinding.Examples
-    className: AnimationLinkTraverser
-  - hash:
-      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Unity.InputSystem.dll
     namespaceName: UnityEngine.InputSystem.UI
     className: BaseInputOverride
-  - hash:
-      serializedVersion: 2
-      Hash: 43acdecfcc62de1110964c47067c846f
-    assemblyName: AstarPathfindingProject.dll
-    namespaceName: Pathfinding
-    className: AlternativePath
-  - hash:
-      serializedVersion: 2
-      Hash: 3dd5460199f4f71ddeb16f492607b8fb
-    assemblyName: AstarPathfindingProject.dll
-    namespaceName: Pathfinding
-    className: AIDestinationSetter
   - hash:
       serializedVersion: 2
       Hash: c1f5356fcd27668ddc25078e27f9828d
@@ -594,12 +651,6 @@ ScriptsOnlyBuild:
     className: HIDDescriptorWindow
   - hash:
       serializedVersion: 2
-      Hash: 5f5144acd3c2507c4190de2f82eb222a
-    assemblyName: AstarPathfindingProject.dll
-    namespaceName: Pathfinding
-    className: RichAI
-  - hash:
-      serializedVersion: 2
       Hash: f087c23fbfa15475a0d110af46fb0496
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -618,22 +669,16 @@ ScriptsOnlyBuild:
     className: DownloadableSample
   - hash:
       serializedVersion: 2
-      Hash: d9cb7c8acc01a633f9daddb2c95daa74
-    assemblyName: AstarPathfindingProject.dll
-    namespaceName: Pathfinding.RVO
-    className: RVOController
-  - hash:
-      serializedVersion: 2
       Hash: 5d5b0c61f3ab6ff5f41b1bbe19764526
     assemblyName: Unity.InputSystem.dll
     namespaceName: UnityEngine.InputSystem.OnScreen
     className: OnScreenButton
   - hash:
       serializedVersion: 2
-      Hash: 07aad9b25331b661adc0ef9d872eeefe
-    assemblyName: AstarPathfindingProject.dll
-    namespaceName: Pathfinding.Legacy
-    className: LegacyRVOController
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ProjectileDestroyer
   - hash:
       serializedVersion: 2
       Hash: 3164bc883ff663a5cdb32d1ef7e7c0c5
@@ -648,22 +693,22 @@ ScriptsOnlyBuild:
     className: InputActionAsset
   - hash:
       serializedVersion: 2
+      Hash: d3fa159f65127264b63af97e142df4f6
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ObjectivePoint
+  - hash:
+      serializedVersion: 2
       Hash: 285f5d7c369d870b93f4a2cbcec118e4
     assemblyName: Unity.InputSystem.dll
     namespaceName: UnityEngine.InputSystem.Editor
     className: InputDeviceDebuggerWindow
   - hash:
       serializedVersion: 2
-      Hash: e7af7273c8177a5779551d022b323d84
-    assemblyName: AstarPathfindingProject.dll
-    namespaceName: Pathfinding
-    className: RaycastModifier
-  - hash:
-      serializedVersion: 2
-      Hash: ae6171e96440475c0a0ddb26ce8079d0
-    assemblyName: AstarPathfindingProject.dll
-    namespaceName: Pathfinding.Examples
-    className: GroupController
+      Hash: 40a4fc1f78d3925d9758488c369939c6
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: HighScoreText
   - hash:
       serializedVersion: 2
       Hash: f7bb6096199e0cf058d5d69878184cf4
@@ -678,16 +723,16 @@ ScriptsOnlyBuild:
     className: SignalReceiver
   - hash:
       serializedVersion: 2
-      Hash: 68b99d127fd0c3ab6e5e74ae6ea5f744
-    assemblyName: AstarPathfindingProject.dll
-    namespaceName: Pathfinding.Examples
-    className: MineBotAnimation
-  - hash:
-      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Unity.InputSystem.dll
     namespaceName: UnityEngine.InputSystem.Editor
     className: InputActionAssetEditor
+  - hash:
+      serializedVersion: 2
+      Hash: 0a49be492a6e9cb436d0721676e40d26
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: OutOfPauseButtonMover
   - hash:
       serializedVersion: 2
       Hash: 3164bc883ff663a5cdb32d1ef7e7c0c5
@@ -714,12 +759,6 @@ ScriptsOnlyBuild:
     className: ActivationPlayableAsset
   - hash:
       serializedVersion: 2
-      Hash: c181fc48305e752f3e25e609d7495634
-    assemblyName: AstarPathfindingProject.dll
-    namespaceName: Pathfinding
-    className: AstarDebugger
-  - hash:
-      serializedVersion: 2
       Hash: 18c222bef9ae745ce69ddde9b74337ca
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
@@ -732,52 +771,10 @@ ScriptsOnlyBuild:
     className: ProjectileDeath
   - hash:
       serializedVersion: 2
-      Hash: afc5b93a7b192de2dcb3832fe35a5c7e
-    assemblyName: AstarPathfindingProject.dll
-    namespaceName: Pathfinding.Examples
-    className: ManualRVOAgent
-  - hash:
-      serializedVersion: 2
-      Hash: 607ec805afd8d80d43f15ef06639440f
-    assemblyName: AstarPathfindingProject.dll
-    namespaceName: Pathfinding
-    className: TileHandlerHelper
-  - hash:
-      serializedVersion: 2
-      Hash: f4c3889e1b5edb0c13441e613f7f1166
-    assemblyName: AstarPathfindingProject.dll
-    namespaceName: Pathfinding.Examples
-    className: MecanimBridge
-  - hash:
-      serializedVersion: 2
       Hash: c1933cc0a2f4ff6eb13333347497beb3
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: TimelineAsset
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: AstarPathfindingProject.dll
-    namespaceName: Pathfinding
-    className: NavmeshClamp
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: AstarPathfindingProject.dll
-    namespaceName: Pathfinding.Examples
-    className: Astar3DButton
-  - hash:
-      serializedVersion: 2
-      Hash: 66c061c17549c495f74c9dcc30aaaab2
-    assemblyName: AstarPathfindingProject.dll
-    namespaceName: Pathfinding.Examples
-    className: MineBotAI
-  - hash:
-      serializedVersion: 2
-      Hash: 4416928e646e0c1559b4383535b53d36
-    assemblyName: AstarPathfindingProject.dll
-    namespaceName: Pathfinding.RVO
-    className: RVOSquareObstacle
   - hash:
       serializedVersion: 2
       Hash: 76aef43e801605d1829c8805eeee135c
@@ -786,58 +783,10 @@ ScriptsOnlyBuild:
     className: InputActionReference
   - hash:
       serializedVersion: 2
-      Hash: 6ace2a5b746043111010f9ba6dccb74c
-    assemblyName: AstarPathfindingProject.dll
-    namespaceName: Pathfinding
-    className: RecastMeshObj
-  - hash:
-      serializedVersion: 2
-      Hash: 8abe5c5970b933d28c84fe29c2232578
-    assemblyName: AstarPathfindingProject.dll
-    namespaceName: Pathfinding
-    className: RelevantGraphSurface
-  - hash:
-      serializedVersion: 2
       Hash: e4aac510b698bae77a5dbde189fe88e5
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TextMeshProUGUI
-  - hash:
-      serializedVersion: 2
-      Hash: 95ec5ef41811e64837c657c402b6d78f
-    assemblyName: AstarPathfindingProject.dll
-    namespaceName: Pathfinding
-    className: Seeker
-  - hash:
-      serializedVersion: 2
-      Hash: cbdd099350fe077cb17fee9dea4b37a1
-    assemblyName: AstarPathfindingProject.dll
-    namespaceName: Pathfinding
-    className: TargetMover
-  - hash:
-      serializedVersion: 2
-      Hash: 0c90e4965a87e75ed6603c612c4387e3
-    assemblyName: AstarPathfindingProject.dll
-    namespaceName: Pathfinding.Examples
-    className: BezierMover
-  - hash:
-      serializedVersion: 2
-      Hash: 6cd30e66b8b8737cd9e9c9402bc9f6e1
-    assemblyName: AstarPathfindingProject.dll
-    namespaceName: Pathfinding
-    className: UnityReferenceHelper
-  - hash:
-      serializedVersion: 2
-      Hash: b478fca366fa93f5a93f584cd5ba32cc
-    assemblyName: AstarPathfindingProject.dll
-    namespaceName: Pathfinding.Examples
-    className: DoorController
-  - hash:
-      serializedVersion: 2
-      Hash: e2c52df92f5a11103c324ae820575e40
-    assemblyName: AstarPathfindingProject.dll
-    namespaceName: Pathfinding.Examples
-    className: TurnBasedAI
   - hash:
       serializedVersion: 2
       Hash: f336e086360abe49a3323e5f1583c35a
@@ -852,12 +801,6 @@ ScriptsOnlyBuild:
     className: ProjectileFollowing
   - hash:
       serializedVersion: 2
-      Hash: ff653aebffb231eb559930e8cf311d62
-    assemblyName: AstarPathfindingProject.dll
-    namespaceName: Pathfinding
-    className: GraphUpdateScene
-  - hash:
-      serializedVersion: 2
       Hash: ae83e830e7a90c0aff918c4c2e520825
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -870,34 +813,28 @@ ScriptsOnlyBuild:
     className: BeforeAfterTestCommandState
   - hash:
       serializedVersion: 2
-      Hash: 607ec805afd8d80d43f15ef06639440f
-    assemblyName: AstarPathfindingProject.dll
-    namespaceName: Pathfinding
-    className: BlockManager
+      Hash: 13f471d148c942ffaa092f1da35e68da
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PauseMenu
   - hash:
       serializedVersion: 2
-      Hash: 427e4ae6223362877cde7ac01baa97c3
-    assemblyName: AstarPathfindingProject.dll
-    namespaceName: Pathfinding
-    className: NodeLink3
+      Hash: 364e3cd008459d079ce19ca42999b8d5
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: LevelLoader
   - hash:
       serializedVersion: 2
-      Hash: 7689dbab6d2ef32e0a3e44c0f5a1da35
-    assemblyName: AstarPathfindingProject.dll
-    namespaceName: Pathfinding.RVO
-    className: RVOSimulator
+      Hash: d96bb9b9a03df079043e413ceb68ab73
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ScoreDisplay
   - hash:
       serializedVersion: 2
-      Hash: cbd4f9267378547c0294504e852fcb1a
+      Hash: f30ca0408b1a934f7d47e5e73fdb2f05
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Player_Movement
-  - hash:
-      serializedVersion: 2
-      Hash: 2fde15209800c4e94cf99bcad8981a24
-    assemblyName: AstarPathfindingProject.dll
-    namespaceName: Pathfinding.Examples
-    className: ProceduralWorld
   - hash:
       serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
@@ -912,34 +849,16 @@ ScriptsOnlyBuild:
     className: TMP_StyleSheet
   - hash:
       serializedVersion: 2
-      Hash: 0aab9b0491f3a88d6459f7add40022e4
-    assemblyName: AstarPathfindingProject.dll
-    namespaceName: Pathfinding.Legacy
-    className: LegacyAIPath
-  - hash:
-      serializedVersion: 2
       Hash: cd0ecdca0166232906c6f2df9dddc3d3
     assemblyName: Unity.InputSystem.dll
     namespaceName: UnityEngine.InputSystem.Editor
     className: AdvancedDropdownWindow
   - hash:
       serializedVersion: 2
-      Hash: 2d57f4d10d5ed795e4304ee5d6404144
-    assemblyName: AstarPathfindingProject.dll
-    namespaceName: Pathfinding
-    className: DynamicGridObstacle
-  - hash:
-      serializedVersion: 2
-      Hash: b349b142d600a2478af04cea15b41a0b
-    assemblyName: AstarPathfindingProject.dll
-    namespaceName: Pathfinding
-    className: AnimationLink
-  - hash:
-      serializedVersion: 2
-      Hash: 0d85f4fda1e0e70cd92c084d12f05cdc
-    assemblyName: AstarPathfindingProject.dll
-    namespaceName: Pathfinding.Examples
-    className: ExampleMover
+      Hash: 763c042c0eee9572595f5104b89b3d21
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: MainMenuDJ
   - hash:
       serializedVersion: 2
       Hash: c97a61aa990b67025afa9575e5e90c75
@@ -954,34 +873,10 @@ ScriptsOnlyBuild:
     className: TextMeshPro
   - hash:
       serializedVersion: 2
-      Hash: eedb7c5c887d1129b67a28116ea35bc6
-    assemblyName: AstarPathfindingProject.dll
-    namespaceName: Pathfinding
-    className: RecastTileUpdateHandler
-  - hash:
-      serializedVersion: 2
       Hash: 3165968ba45c74472d279ba04455fccb
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_ColorGradient
-  - hash:
-      serializedVersion: 2
-      Hash: 8a10d1fc6029b3f51d0abc87582fa9fd
-    assemblyName: AstarPathfindingProject.dll
-    namespaceName: Pathfinding.Examples
-    className: HexagonTrigger
-  - hash:
-      serializedVersion: 2
-      Hash: c0e31dd31c35455f422978da26bb908a
-    assemblyName: AstarPathfindingProject.dll
-    namespaceName: Pathfinding
-    className: Patrol
-  - hash:
-      serializedVersion: 2
-      Hash: a03326cf334d7eb413dc1c06b941cc28
-    assemblyName: AstarPathfindingProject.dll
-    namespaceName: Pathfinding.Examples
-    className: LightweightRVO
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -1044,28 +939,22 @@ ScriptsOnlyBuild:
     className: Toggle
   - hash:
       serializedVersion: 2
-      Hash: f6f248e173d741eeabae81a2867ce87e
-    assemblyName: AstarPathfindingProject.dll
-    namespaceName: Pathfinding
-    className: NavmeshCut
-  - hash:
-      serializedVersion: 2
       Hash: 8220b46879dc5e37db1b940c938f5744
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: SignalEmitter
   - hash:
       serializedVersion: 2
-      Hash: 607ec805afd8d80d43f15ef06639440f
-    assemblyName: AstarPathfindingProject.dll
-    namespaceName: Pathfinding
-    className: LocalSpaceGraph
-  - hash:
-      serializedVersion: 2
       Hash: 0c05f2bfb402def3f0a85a62a2323c7f
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Slider
+  - hash:
+      serializedVersion: 2
+      Hash: 7c5d44e595e24145e6101b1b24f22c33
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: StartScreenCameraBreathe
   - hash:
       serializedVersion: 2
       Hash: 880d064aa7bf32abd8295b0fe07bcc13
@@ -1090,7 +979,14 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SavingOnReload
   platform: 13
   scenePathNames:
+  - Assets/Scenes/Start_Menu.unity
   - Assets/Scenes/Game_Screen.unity
   playerPath: C:/Users/Bredian/Desktop/Build_Bullet.apk
