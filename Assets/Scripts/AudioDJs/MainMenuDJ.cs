@@ -7,9 +7,11 @@ public class MainMenuDJ : MonoBehaviour
     // Start is called before the first frame update
     [SerializeField] private List<AudioSource> mainMenuThemes;
     private int currentTheme;
+    private int lastTheme;
     void Start()
     {
         currentTheme = Random.Range(0, mainMenuThemes.Count);
+        lastTheme = currentTheme;
         mainMenuThemes[currentTheme].Play();
     }
 
@@ -18,7 +20,11 @@ public class MainMenuDJ : MonoBehaviour
     {
         if(!mainMenuThemes[currentTheme].isPlaying)
         {
-            currentTheme = Random.Range(0, mainMenuThemes.Count);
+            do
+            {
+                currentTheme = Random.Range(0, mainMenuThemes.Count);
+            } while(lastTheme == currentTheme);
+            lastTheme = currentTheme;
             mainMenuThemes[currentTheme].Play();
         }
     }

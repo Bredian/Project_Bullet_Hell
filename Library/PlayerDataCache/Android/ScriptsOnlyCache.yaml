@@ -77,8 +77,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 61
       Script: {instanceID: 0}
-    - Class: 65
-      Script: {instanceID: 0}
     - Class: 74
       Script: {instanceID: 0}
     - Class: 81
@@ -104,47 +102,47 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12144}
     - Class: 114
-      Script: {instanceID: 12280}
+      Script: {instanceID: 12282}
     - Class: 114
-      Script: {instanceID: 12326}
+      Script: {instanceID: 12328}
     - Class: 114
-      Script: {instanceID: 12562}
+      Script: {instanceID: 12564}
     - Class: 114
-      Script: {instanceID: 12670}
+      Script: {instanceID: 12672}
     - Class: 114
-      Script: {instanceID: 12816}
+      Script: {instanceID: 12818}
     - Class: 114
-      Script: {instanceID: 13054}
+      Script: {instanceID: 13056}
     - Class: 114
-      Script: {instanceID: 13324}
-    - Class: 114
-      Script: {instanceID: 13512}
+      Script: {instanceID: 13326}
     - Class: 114
       Script: {instanceID: 13514}
     - Class: 114
-      Script: {instanceID: 13596}
+      Script: {instanceID: 13516}
     - Class: 114
-      Script: {instanceID: 13648}
+      Script: {instanceID: 13598}
     - Class: 114
-      Script: {instanceID: 13654}
+      Script: {instanceID: 13650}
     - Class: 114
-      Script: {instanceID: 13712}
+      Script: {instanceID: 13656}
     - Class: 114
-      Script: {instanceID: 13900}
+      Script: {instanceID: 13714}
     - Class: 114
-      Script: {instanceID: 13950}
+      Script: {instanceID: 13902}
     - Class: 114
-      Script: {instanceID: 14036}
+      Script: {instanceID: 13952}
     - Class: 114
-      Script: {instanceID: 14100}
+      Script: {instanceID: 14038}
     - Class: 114
-      Script: {instanceID: 14150}
+      Script: {instanceID: 14102}
     - Class: 114
-      Script: {instanceID: 14192}
+      Script: {instanceID: 14152}
     - Class: 114
-      Script: {instanceID: 14220}
+      Script: {instanceID: 14194}
     - Class: 114
-      Script: {instanceID: 14310}
+      Script: {instanceID: 14222}
+    - Class: 114
+      Script: {instanceID: 14312}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -182,8 +180,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 49
       Script: {instanceID: 0}
-    - Class: 50
-      Script: {instanceID: 0}
     - Class: 60
       Script: {instanceID: 0}
     - Class: 74
@@ -207,41 +203,41 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12144}
     - Class: 114
-      Script: {instanceID: 12280}
+      Script: {instanceID: 12282}
     - Class: 114
-      Script: {instanceID: 12562}
+      Script: {instanceID: 12564}
     - Class: 114
-      Script: {instanceID: 12670}
+      Script: {instanceID: 12672}
     - Class: 114
-      Script: {instanceID: 12706}
+      Script: {instanceID: 12708}
     - Class: 114
-      Script: {instanceID: 12816}
+      Script: {instanceID: 12818}
     - Class: 114
-      Script: {instanceID: 13324}
+      Script: {instanceID: 13326}
     - Class: 114
-      Script: {instanceID: 13512}
+      Script: {instanceID: 13514}
     - Class: 114
-      Script: {instanceID: 13596}
+      Script: {instanceID: 13598}
     - Class: 114
-      Script: {instanceID: 13654}
+      Script: {instanceID: 13656}
     - Class: 114
-      Script: {instanceID: 13672}
+      Script: {instanceID: 13674}
     - Class: 114
-      Script: {instanceID: 13712}
+      Script: {instanceID: 13714}
     - Class: 114
-      Script: {instanceID: 13900}
+      Script: {instanceID: 13902}
     - Class: 114
-      Script: {instanceID: 13950}
+      Script: {instanceID: 13952}
     - Class: 114
-      Script: {instanceID: 14036}
+      Script: {instanceID: 14038}
     - Class: 114
-      Script: {instanceID: 14150}
+      Script: {instanceID: 14152}
     - Class: 114
-      Script: {instanceID: 14268}
+      Script: {instanceID: 14270}
     - Class: 114
-      Script: {instanceID: 14310}
+      Script: {instanceID: 14312}
     - Class: 114
-      Script: {instanceID: 14614}
+      Script: {instanceID: 14616}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -273,7 +269,7 @@ ScriptsOnlyBuild:
     className: CanvasScaler
   - hash:
       serializedVersion: 2
-      Hash: 0874182c761aad2fcfa94cf2b6b6fa00
+      Hash: affeb90dcf8673932099d4c18f07fbb4
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerDeath
@@ -381,7 +377,7 @@ ScriptsOnlyBuild:
     className: TMP_InputField
   - hash:
       serializedVersion: 2
-      Hash: f15e03d7401c7e06b8917608c5d11165
+      Hash: 4d1b10b73fb638044ac9a13db29110c0
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: ProjectileSpawner
@@ -409,6 +405,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: SignalAsset
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SavingOnReload
   - hash:
       serializedVersion: 2
       Hash: 0dbc3be398b4869a5c8d0d8481ee402c
@@ -819,7 +821,7 @@ ScriptsOnlyBuild:
     className: PauseMenu
   - hash:
       serializedVersion: 2
-      Hash: 364e3cd008459d079ce19ca42999b8d5
+      Hash: 6428b270c8565bcfce2505a08f88b133
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: LevelLoader
@@ -831,7 +833,7 @@ ScriptsOnlyBuild:
     className: ScoreDisplay
   - hash:
       serializedVersion: 2
-      Hash: f30ca0408b1a934f7d47e5e73fdb2f05
+      Hash: 472432536824af5ab03afc2d1a29913a
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Player_Movement
@@ -979,12 +981,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: SavingOnReload
   platform: 13
   scenePathNames:
   - Assets/Scenes/Start_Menu.unity

@@ -8,9 +8,12 @@ public class LevelLoader : MonoBehaviour
     // Start is called before the first frame update
     [SerializeField] private Animator transition;
     [SerializeField] private float transitionTime;
+    [SerializeField] private AudioSource zoomOut;
+    [SerializeField] private AudioSource zoomIn;
     void Start()
     {
-
+        if(SceneManager.GetActiveScene().name == "Game_Screen")
+            zoomIn.Play();
     }
 
     // Update is called once per frame
@@ -20,6 +23,7 @@ public class LevelLoader : MonoBehaviour
     }
     public void LoadGame()
     {
+        zoomOut.Play();
         ObjectivePoint.score = 0;
         StartCoroutine(LoadLevel("Game_Screen"));
     }
@@ -30,6 +34,7 @@ public class LevelLoader : MonoBehaviour
     }
     IEnumerator LoadLevel(string levelName)
     {
+        //zoomOut.Play();
         transition.SetTrigger("Start");
         yield return new WaitForSeconds(transitionTime);
         SceneManager.LoadScene(levelName);

@@ -10,6 +10,7 @@ public class PlayerDeath : MonoBehaviour
     [SerializeField] private SpriteRenderer sprite;
     [SerializeField] private Collider2D playerCollider;
     [SerializeField] private AudioSource explosionSound;
+    [SerializeField] private AudioSource step;
     public static bool dead = false;
     void Start()
     {
@@ -25,6 +26,8 @@ public class PlayerDeath : MonoBehaviour
             dead = true;
             OnPlayerDeath.Invoke(dead);
             sprite.enabled = false;
+            if(step.isPlaying)
+                step.mute = true;;
             explosion.Play();
             explosionSound.Play();
         }

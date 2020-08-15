@@ -19,7 +19,16 @@ public class ProjectileSpawner : MonoBehaviour
     [Header("Spawnable prefab")]
     [SerializeField] private GameObject spawnablePrefab;
     [Header("Don't shoot near the player")]
-    [SerializeField] private float deltaRadius; 
+    [SerializeField] private float deltaRadius;
+    private float spawnX;
+    private float spawnY;
+    private float transitionTime = 1f; 
+    //Shoot direction
+    //0 - up
+    //1 - right
+    //2 - down
+    //3 - left 
+    [SerializeField] private int direction;
     private float currentSpawnRate;
     private Vector3 playerPosition;
     private int previousScore;
@@ -33,7 +42,30 @@ public class ProjectileSpawner : MonoBehaviour
     {
         previousScore = ObjectivePoint.score;
         playerPosition = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>().position;
-        currentSpawnRate = averageSpawnRate + Random.Range(-deviationRate * averageSpawnRate, deviationRate * averageSpawnRate);
+        currentSpawnRate = transitionTime + averageSpawnRate + Random.Range(-deviationRate * averageSpawnRate, deviationRate * averageSpawnRate);
+    }
+    private void RandomizeSpawnPosition()
+    {
+        switch(direction)
+        {
+
+            case 0:
+                spawnY = Camera.main.ScreenToWorldPoint(new Vector2(0, 0)).y- 0.5f;
+                spawnX = Random.Range(Camera.main.ScreenToWorldPoint(new Vector2(0, 0)).x + 0.3f, Camera.main.ScreenToWorldPoint(new Vector2(Screen.width, 0)).x - 0.3f);
+                break;
+            case 1:
+                spawnY = Random.Range(Camera.main.ScreenToWorldPoint(new Vector2(0, 0)).y + 0.3f, Camera.main.ScreenToWorldPoint(new Vector2(0, Screen.height)).y - 0.3f);
+                spawnX = Camera.main.ScreenToWorldPoint(new Vector2(0, 0)).x - 1f;
+                break;
+            case 2:
+                spawnY = Camera.main.ScreenToWorldPoint(new Vector2(0, Screen.height)).y + 0.5f;
+                spawnX = Random.Range(Camera.main.ScreenToWorldPoint(new Vector2(0, 0)).x + 0.3f, Camera.main.ScreenToWorldPoint(new Vector2(Screen.width, 0)).x - 0.3f);
+                break;
+            case 3:
+                spawnY = Random.Range(Camera.main.ScreenToWorldPoint(new Vector2(0, 0)).y + 0.3f, Camera.main.ScreenToWorldPoint(new Vector2(0, Screen.height)).y - 0.3f);
+                spawnX = Camera.main.ScreenToWorldPoint(new Vector2(Screen.width, 0)).x + 1f;
+                break;
+        }
     }
 
     // Update is called once per frame
@@ -45,12 +77,13 @@ public class ProjectileSpawner : MonoBehaviour
             CalculateSpawnRate();
         }
         currentSpawnRate -= Time.deltaTime;
-        if(currentSpawnRate <=0 )
+        if(currentSpawnRate <= 0)
         {
             Vector3 spawnPosition;
             do
             {
-                spawnPosition = new Vector3(Random.Range(minX, maxX), Random.Range(minY, maxY), 0f);
+                RandomizeSpawnPosition();
+                spawnPosition = new Vector3(spawnX, spawnY, 0f);
             } while((playerPosition - spawnPosition).magnitude < deltaRadius);
             GameObject spawned = Instantiate(spawnablePrefab, spawnPosition, spawnablePrefab.transform.rotation);
             currentSpawnRate = averageSpawnRate + Random.Range(-deviationRate * averageSpawnRate, deviationRate * averageSpawnRate);

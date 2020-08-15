@@ -8,6 +8,7 @@ public class Player_Movement : MonoBehaviour
     //Radius around tapPosition where you need stop moving
     [SerializeField] private float deltaRadius;
     [SerializeField] private PlayerDeath playerDeath;
+    [SerializeField] private AudioSource step;
     //New Input Systems Actions called InputMaster
     private InputMaster inputMaster;
     //Move flag
@@ -18,8 +19,10 @@ public class Player_Movement : MonoBehaviour
     private Vector3 tapPosition;
     //Speed magnitude
     public float speed = 2;
+    private float transitionTime = 1f;
     void Awake()
     {
+        step.mute = false;
         tapPosition = transform.position;
         //InputMaster init: creating instance of InputMaster and enabling it
         inputMaster = new InputMaster();
@@ -48,15 +51,26 @@ public class Player_Movement : MonoBehaviour
     }
     void SetMovement(Vector3 position)
     {
-        tapPosition = position;
-        //Flattening tapPosition
-        tapPosition = new Vector3(tapPosition.x, tapPosition.y, 0f)
-;       //Rising flags
-        moving = true;
-        needRotation = true;
+        if(transitionTime <= 0)
+        {
+            tapPosition = position;
+            //Flattening tapPosition
+            tapPosition = new Vector3(tapPosition.x, tapPosition.y, 0f);
+           //Rising flags
+            moving = true;
+            needRotation = true;
+        }
     }
     void Update()
     {
+        if(transitionTime > 0)
+        {
+            transitionTime -= Time.deltaTime;
+        }
+        else
+        {
+            transitionTime = 0;
+        }
         //Getting direction
         Vector3 direction = tapPosition - transform.position;
         //Rotating when needRotation flag is rised
@@ -67,12 +81,19 @@ public class Player_Movement : MonoBehaviour
         }
         //Moving in direction with our speed until we in deltaRadius from tapPosition
         if(moving)
-           // Time.timeScale = 1f;
+        {
             transform.position += Vector3.Normalize(direction) * speed * Time.deltaTime;
+            if(!step.isPlaying)
+                step.Play();
+        }
         if(direction.magnitude <= deltaRadius)
         {
-            //Time.timeScale = 0f;
-            moving = false;  
+            moving = false;
+            step.Stop();  
+        }
+        if(PauseMenu.paused)
+        {
+            step.Stop();
         }
     }
 }

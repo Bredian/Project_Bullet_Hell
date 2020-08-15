@@ -6,7 +6,7 @@ public class OutOfPauseButtonMover : MonoBehaviour
 {
     // Start is called before the first frame update
     [SerializeField] private float pushAmmount = -0.9f;
-    void OnColliderEnter2D(Collision2D col)
+    void OnTriggerEnter2D(Collider2D col)
     {
         if(col.gameObject.GetComponent<ObjectivePoint>() != null)
         {
