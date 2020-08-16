@@ -8,7 +8,7 @@ public class ProjectileBase : MonoBehaviour
     {
         if(col.gameObject.tag == "Player" && !PlayerDeath.dead)
         {
-            col.gameObject.GetComponent<Player_Movement>().speed = 0;
+            col.gameObject.GetComponent<PlayerOldMovement>().speed = 0;
             col.gameObject.GetComponent<PlayerDeath>().Death();
         }
     }

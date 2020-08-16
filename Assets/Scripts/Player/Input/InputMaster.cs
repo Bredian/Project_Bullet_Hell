@@ -1,4 +1,4 @@
-// GENERATED AUTOMATICALLY FROM 'Assets/Scripts/Input/InputMaster.inputactions'
+// GENERATED AUTOMATICALLY FROM 'Assets/Scripts/Player/Input/InputMaster.inputactions'
 
 using System;
 using System.Collections;
@@ -20,7 +20,7 @@ public class @InputMaster : IInputActionCollection, IDisposable
             ""actions"": [
                 {
                     ""name"": ""Movement"",
-                    ""type"": ""Button"",
+                    ""type"": ""Value"",
                     ""id"": ""4d22f29d-f0b0-4115-b63e-0f8c6631453a"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",

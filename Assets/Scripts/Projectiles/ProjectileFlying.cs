@@ -9,7 +9,7 @@ public class ProjectileFlying : MonoBehaviour
     private float speed;
     void Start()
     {
-        speed = Random.Range(2f, 4f);
+        speed = 4f;
     }
     void Update()
     {

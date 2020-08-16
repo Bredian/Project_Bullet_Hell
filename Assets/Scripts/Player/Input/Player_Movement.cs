@@ -20,8 +20,17 @@ public class Player_Movement : MonoBehaviour
     //Speed magnitude
     public float speed = 2;
     private float transitionTime = 1f;
+    private bool beenPaused = false;
+    private Camera mainCamera;
+    private Touchscreen touchscreen = null;
+    private Mouse mouse = null;
     void Awake()
     {
+        if(Application.isMobilePlatform)
+            touchscreen = Touchscreen.current;
+        if(Application.isEditor)
+            mouse = Mouse.current;
+        mainCamera = Camera.main;
         step.mute = false;
         tapPosition = transform.position;
         //InputMaster init: creating instance of InputMaster and enabling it
@@ -40,13 +49,13 @@ public class Player_Movement : MonoBehaviour
         if(Application.isMobilePlatform)
         {
             //Touchscreen.current.position is Vector2Control for some reason, you need to cast ReadValue() to get Vector2 from it.
-            SetMovement(Camera.main.ScreenToWorldPoint(Touchscreen.current.position.ReadValue()));
+            SetMovement(mainCamera.ScreenToWorldPoint(touchscreen.position.ReadValue()));
         } 
         //Getting tapPosition from Mouse class in Editor
         if(Application.isEditor)
         {
             //Mouse.current.position is Vector2Control for some reason, you need to cast ReadValue() to get Vector2 from it.
-            SetMovement(Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue()));
+            SetMovement(mainCamera.ScreenToWorldPoint(touchscreen.position.ReadValue()));
         } 
     }
     void SetMovement(Vector3 position)
@@ -80,11 +89,17 @@ public class Player_Movement : MonoBehaviour
             needRotation = false;
         }
         //Moving in direction with our speed until we in deltaRadius from tapPosition
-        if(moving)
+        if(moving && !PauseMenu.paused && !beenPaused)
         {
             transform.position += Vector3.Normalize(direction) * speed * Time.deltaTime;
             if(!step.isPlaying)
                 step.Play();
+        }
+        if(beenPaused && moving)
+        {
+            needRotation = false;
+            moving = false;
+            beenPaused = false;
         }
         if(direction.magnitude <= deltaRadius)
         {
@@ -93,6 +108,7 @@ public class Player_Movement : MonoBehaviour
         }
         if(PauseMenu.paused)
         {
+            beenPaused = true;
             step.Stop();
         }
     }

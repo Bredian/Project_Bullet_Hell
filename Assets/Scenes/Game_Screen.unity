@@ -290,6 +290,8 @@ GameObject:
   - component: {fileID: 359653515}
   - component: {fileID: 359653514}
   - component: {fileID: 359653513}
+  - component: {fileID: 359653517}
+  - component: {fileID: 359653518}
   m_Layer: 5
   m_Name: GameOverMenu
   m_TagString: Untagged
@@ -380,6 +382,34 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 1079.9999, y: 2340}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &359653517
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 359653512}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2110d69c1693fda41a114621f8bd6e8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  button: {fileID: 594935790}
+  disableTime: 1.5
+--- !u!114 &359653518
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 359653512}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2110d69c1693fda41a114621f8bd6e8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  button: {fileID: 1116528058}
+  disableTime: 1.5
 --- !u!114 &377454898 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6022603670863658284, guid: c6d8e4776f46d0d44a12cc7b134e32e4,
@@ -449,6 +479,22 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &491528162
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 491528156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b01a17a7cd8fa2a4594982ee59c1e123, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deltaRadius: 0.1
+  playerDeath: {fileID: 491528157}
+  step: {fileID: 491528164}
+  speed: 6.66
 --- !u!82 &491528163
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1096,11 +1142,11 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_NormalColor: {r: 0.95686275, g: 0.9529412, b: 0.93333334, a: 1}
+    m_HighlightedColor: {r: 0.7372549, g: 0.72156864, b: 0.69411767, a: 1}
+    m_PressedColor: {r: 0.5411765, g: 0.5058824, b: 0.4862745, a: 1}
+    m_SelectedColor: {r: 0.09803922, g: 0.09019608, b: 0.08627451, a: 1}
+    m_DisabledColor: {r: 0.7372549, g: 0.72156864, b: 0.69411767, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -1115,7 +1161,7 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 594935791}
+  m_TargetGraphic: {fileID: 641190506}
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
@@ -1144,7 +1190,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Color: {r: 0.8000001, g: 0.8000001, b: 0.8000001, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1226,7 +1272,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Resrtart
+  m_text: Restart
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6896ff9647dfdd84aa5291e38eee5f85, type: 2}
   m_sharedMaterial: {fileID: 8959890592909115789, guid: 6896ff9647dfdd84aa5291e38eee5f85,
@@ -1499,7 +1545,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 7cf58f00fd2d10543a9c8055d26c68d4,
+      objectReference: {fileID: 21300000, guid: aac1a975c0548c34382cfca75e0d4b93,
         type: 3}
     - target: {fileID: 6022603670863658284, guid: c6d8e4776f46d0d44a12cc7b134e32e4,
         type: 3}
@@ -1582,11 +1628,11 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_NormalColor: {r: 0.95686275, g: 0.9529412, b: 0.93333334, a: 1}
+    m_HighlightedColor: {r: 0.7372549, g: 0.72156864, b: 0.69411767, a: 1}
+    m_PressedColor: {r: 0.5411765, g: 0.5058824, b: 0.4862745, a: 1}
+    m_SelectedColor: {r: 0.09803922, g: 0.09019608, b: 0.08627451, a: 1}
+    m_DisabledColor: {r: 0.7372549, g: 0.72156864, b: 0.69411767, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -1601,13 +1647,13 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 922719139}
+  m_TargetGraphic: {fileID: 1108336488}
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 519420033}
-        m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
-        m_MethodName: Quit
+      - m_Target: {fileID: 519420035}
+        m_TargetAssemblyTypeName: LevelLoader, Assembly-CSharp
+        m_MethodName: LoadMainMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1816,17 +1862,16 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_NormalColor: {r: 0.95686275, g: 0.9529412, b: 0.93333334, a: 1}
+    m_HighlightedColor: {r: 0.7372549, g: 0.72156864, b: 0.69411767, a: 1}
+    m_PressedColor: {r: 0.5411765, g: 0.5058824, b: 0.4862745, a: 1}
+    m_SelectedColor: {r: 0.09803922, g: 0.09019608, b: 0.08627451, a: 1}
+    m_DisabledColor: {r: 0.7372549, g: 0.72156864, b: 0.69411767, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 21300000, guid: 62986c66d815d0c49bc08d178aa7baea,
-      type: 3}
-    m_PressedSprite: {fileID: 21300000, guid: ddbc4628e22be4948a5d303c5fb0d29e, type: 3}
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
     m_SelectedSprite: {fileID: 0}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
@@ -1836,7 +1881,7 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 1053248320}
+  m_TargetGraphic: {fileID: 1703773390}
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
@@ -1866,7 +1911,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 0}
-  m_RaycastTarget: 0
+  m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -2296,11 +2341,11 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_NormalColor: {r: 0.95686275, g: 0.9529412, b: 0.93333334, a: 1}
+    m_HighlightedColor: {r: 0.7372549, g: 0.72156864, b: 0.69411767, a: 1}
+    m_PressedColor: {r: 0.5411765, g: 0.5058824, b: 0.4862745, a: 1}
+    m_SelectedColor: {r: 0.09803922, g: 0.09019608, b: 0.08627451, a: 1}
+    m_DisabledColor: {r: 0.7372549, g: 0.72156864, b: 0.69411767, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -2315,7 +2360,7 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 1108349240}
+  m_TargetGraphic: {fileID: 57834501}
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
@@ -2428,11 +2473,11 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_NormalColor: {r: 0.95686275, g: 0.9529412, b: 0.93333334, a: 1}
+    m_HighlightedColor: {r: 0.7372549, g: 0.72156864, b: 0.69411767, a: 1}
+    m_PressedColor: {r: 0.5411765, g: 0.5058824, b: 0.4862745, a: 1}
+    m_SelectedColor: {r: 0.09803922, g: 0.09019608, b: 0.08627451, a: 1}
+    m_DisabledColor: {r: 0.7372549, g: 0.72156864, b: 0.69411767, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -2447,7 +2492,7 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 1116528059}
+  m_TargetGraphic: {fileID: 1833102296}
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
@@ -4153,6 +4198,11 @@ PrefabInstance:
       propertyPath: step
       value: 
       objectReference: {fileID: 491528164}
+    - target: {fileID: 8518962890472063347, guid: 2f2919e415d6177419d945a7c8ed2035,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8518962890844643994, guid: 2f2919e415d6177419d945a7c8ed2035,
         type: 3}
       propertyPath: NoiseModule.frequency
@@ -4264,5 +4314,6 @@ PrefabInstance:
       propertyPath: ColorModule.enabled
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8518962890472063347, guid: 2f2919e415d6177419d945a7c8ed2035, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 2f2919e415d6177419d945a7c8ed2035, type: 3}
